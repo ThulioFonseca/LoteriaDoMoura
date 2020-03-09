@@ -15,9 +15,12 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 public class ScreenObj extends JFrame {
+	public ScreenObj() {
+	}
 
 	private static final long serialVersionUID = -8647386001813388856L;
 
@@ -31,7 +34,7 @@ public class ScreenObj extends JFrame {
 
 	}
 
-	private boolean StatusCount(Boolean[] stts) { // Verifica se somente 7 numeros foram removidos;
+	private boolean StatusCount(Boolean[] stts) { // Verifica se no mÃ¡ximo 7 numeros foram removidos;
 
 		int count = 0;
 
@@ -61,27 +64,29 @@ public class ScreenObj extends JFrame {
 
 	}
 
-	public JPanel CardNumber() { // Cria um "Cartão" onde o usuario escolhe os 7 numeros que serão removidos das
+	public JPanel CardNumber() { // Cria um "Cartï¿½o" onde o usuario escolhe os 7 numeros que serï¿½o removidos das
 									// apostas;
-
+		
 		JPanel panel = new JPanel();
+		TitledBorder borda = new TitledBorder("Exclua 7 nÃºmeros");
+		borda.setBorder(new LineBorder(Color.lightGray));
 		panel.setBackground(UIManager.getColor("Button.disabledShadow"));
-		panel.setBorder(new TitledBorder("Exclua 7 números"));
+		panel.setBorder(borda);
 		((TitledBorder) panel.getBorder()).setTitleJustification(TitledBorder.CENTER);
+		
 		panel.setBounds(31, 40, 265, 220);
 		panel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
 		JButton button = new JButton("01");
 		button.setFont(new Font("Dubai Medium", Font.PLAIN, 10));
 		button.setFocusable(false);
-
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
 				if (status[0] == false && StatusCount(status) == true) {
 
 					status[0] = true;
-					button.setBackground(Color.green);
+					button.setBackground(Color.red);
 
 				} else {
 
@@ -103,7 +108,7 @@ public class ScreenObj extends JFrame {
 				if (status[1] == false && StatusCount(status) == true) {
 
 					status[1] = true;
-					button_1.setBackground(Color.green);
+					button_1.setBackground(Color.red);
 
 				} else {
 
@@ -126,7 +131,7 @@ public class ScreenObj extends JFrame {
 				if (status[2] == false) {
 
 					status[2] = true;
-					button_2.setBackground(Color.green);
+					button_2.setBackground(Color.red);
 
 				} else {
 
@@ -148,7 +153,7 @@ public class ScreenObj extends JFrame {
 				if (status[3] == false && StatusCount(status) == true) {
 
 					status[3] = true;
-					button_3.setBackground(Color.green);
+					button_3.setBackground(Color.red);
 
 				} else {
 
@@ -170,7 +175,7 @@ public class ScreenObj extends JFrame {
 				if (status[4] == false && StatusCount(status) == true) {
 
 					status[4] = true;
-					button_4.setBackground(Color.green);
+					button_4.setBackground(Color.red);
 
 				} else {
 
@@ -192,7 +197,7 @@ public class ScreenObj extends JFrame {
 				if (status[5] == false && StatusCount(status) == true) {
 
 					status[5] = true;
-					button_5.setBackground(Color.green);
+					button_5.setBackground(Color.red);
 
 				} else {
 
@@ -214,7 +219,7 @@ public class ScreenObj extends JFrame {
 				if (status[6] == false && StatusCount(status) == true) {
 
 					status[6] = true;
-					button_6.setBackground(Color.green);
+					button_6.setBackground(Color.red);
 
 				} else {
 
@@ -236,7 +241,7 @@ public class ScreenObj extends JFrame {
 				if (status[7] == false && StatusCount(status) == true) {
 
 					status[7] = true;
-					button_7.setBackground(Color.green);
+					button_7.setBackground(Color.red);
 
 				} else {
 
@@ -258,7 +263,7 @@ public class ScreenObj extends JFrame {
 				if (status[8] == false && StatusCount(status) == true) {
 
 					status[8] = true;
-					button_8.setBackground(Color.green);
+					button_8.setBackground(Color.red);
 
 				} else {
 
@@ -280,7 +285,7 @@ public class ScreenObj extends JFrame {
 				if (status[9] == false && StatusCount(status) == true) {
 
 					status[9] = true;
-					button_9.setBackground(Color.green);
+					button_9.setBackground(Color.red);
 
 				} else {
 
@@ -302,7 +307,7 @@ public class ScreenObj extends JFrame {
 				if (status[10] == false && StatusCount(status) == true) {
 
 					status[10] = true;
-					button_10.setBackground(Color.green);
+					button_10.setBackground(Color.red);
 
 				} else {
 
@@ -324,7 +329,7 @@ public class ScreenObj extends JFrame {
 				if (status[11] == false && StatusCount(status) == true) {
 
 					status[11] = true;
-					button_11.setBackground(Color.green);
+					button_11.setBackground(Color.red);
 
 				} else {
 
@@ -346,7 +351,7 @@ public class ScreenObj extends JFrame {
 				if (status[12] == false && StatusCount(status) == true) {
 
 					status[12] = true;
-					button_12.setBackground(Color.green);
+					button_12.setBackground(Color.red);
 
 				} else {
 
@@ -368,7 +373,7 @@ public class ScreenObj extends JFrame {
 				if (status[13] == false && StatusCount(status) == true) {
 
 					status[13] = true;
-					button_13.setBackground(Color.green);
+					button_13.setBackground(Color.red);
 
 				} else {
 
@@ -390,7 +395,7 @@ public class ScreenObj extends JFrame {
 				if (status[14] == false && StatusCount(status) == true) {
 
 					status[14] = true;
-					button_14.setBackground(Color.green);
+					button_14.setBackground(Color.red);
 
 				} else {
 
@@ -412,7 +417,7 @@ public class ScreenObj extends JFrame {
 				if (status[15] == false && StatusCount(status) == true) {
 
 					status[15] = true;
-					button_15.setBackground(Color.green);
+					button_15.setBackground(Color.red);
 
 				} else {
 
@@ -434,7 +439,7 @@ public class ScreenObj extends JFrame {
 				if (status[16] == false && StatusCount(status) == true) {
 
 					status[16] = true;
-					button_16.setBackground(Color.green);
+					button_16.setBackground(Color.red);
 
 				} else {
 
@@ -456,7 +461,7 @@ public class ScreenObj extends JFrame {
 				if (status[17] == false && StatusCount(status) == true) {
 
 					status[17] = true;
-					button_17.setBackground(Color.green);
+					button_17.setBackground(Color.red);
 
 				} else {
 
@@ -478,7 +483,7 @@ public class ScreenObj extends JFrame {
 				if (status[18] == false && StatusCount(status) == true) {
 
 					status[18] = true;
-					button_18.setBackground(Color.green);
+					button_18.setBackground(Color.red);
 
 				} else {
 
@@ -500,7 +505,7 @@ public class ScreenObj extends JFrame {
 				if (status[19] == false && StatusCount(status) == true) {
 
 					status[19] = true;
-					button_19.setBackground(Color.green);
+					button_19.setBackground(Color.red);
 
 				} else {
 
@@ -522,7 +527,7 @@ public class ScreenObj extends JFrame {
 				if (status[20] == false && StatusCount(status) == true) {
 
 					status[20] = true;
-					button_20.setBackground(SystemColor.green);
+					button_20.setBackground(SystemColor.red);
 
 				} else {
 
@@ -544,7 +549,7 @@ public class ScreenObj extends JFrame {
 				if (status[21] == false && StatusCount(status) == true) {
 
 					status[21] = true;
-					button_21.setBackground(Color.green);
+					button_21.setBackground(Color.red);
 
 				} else {
 
@@ -566,7 +571,7 @@ public class ScreenObj extends JFrame {
 				if (status[22] == false && StatusCount(status) == true) {
 
 					status[22] = true;
-					button_22.setBackground(Color.green);
+					button_22.setBackground(Color.red);
 
 				} else {
 
@@ -588,7 +593,7 @@ public class ScreenObj extends JFrame {
 				if (status[23] == false && StatusCount(status) == true) {
 
 					status[23] = true;
-					button_23.setBackground(Color.green);
+					button_23.setBackground(Color.red);
 
 				} else {
 
@@ -610,7 +615,7 @@ public class ScreenObj extends JFrame {
 				if (status[24] == false && StatusCount(status) == true) {
 
 					status[24] = true;
-					button_24.setBackground(Color.green);
+					button_24.setBackground(Color.red);
 
 				} else {
 
@@ -623,12 +628,17 @@ public class ScreenObj extends JFrame {
 		});
 		panel.add(button_24);
 
-		JButton Excluir = new JButton("Excluir"); // Botão que adiciona os numeros selecionados à lista de excluidos -
+		JButton Excluir = new JButton("Excluir"); // Botï¿½o que adiciona os numeros selecionados ï¿½ lista de excluidos -
 													// "ToRemove"
 		Excluir.setFocusable(false);
 		Excluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				
+				TitledBorder borda2 = new TitledBorder("Exclua 7 nÃºmeros");
+				borda2.setBorder(new LineBorder(Color.RED));
+				borda2.setTitleJustification(TitledBorder.CENTER);
+				panel.setBorder(borda2);
+				
 				ToRemove.clear();
 
 				for (int i = 0; i < status.length; i++) {
@@ -645,13 +655,17 @@ public class ScreenObj extends JFrame {
 		Excluir.setBounds(61, 195, 59, 23);
 		panel.add(Excluir);
 
-		JButton Reset = new JButton("Reset"); // Botão para limpar todos as variavies e iniciar um nova seleção "limpa";
+		JButton Reset = new JButton("Reset"); // Botï¿½o para limpar todos as variavies e iniciar um nova seleï¿½ï¿½o "limpa";
 		Reset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				Boolean[] statusClear = { false, false, false, false, false, false, false, false, false, false, false,
 						false, false, false, false, false, false, false, false, false, false, false, false, false,
 						false };
+				
+				
+				panel.setBorder(borda);
+				
 
 				ToRemove.clear();
 
@@ -693,7 +707,7 @@ public class ScreenObj extends JFrame {
 
 	}
 
-	public JPanel Results(List<Integer> aposta, int bet) { // Metodo que retorna o cartão com os numeros de cada aposta;
+	public JPanel Results(List<Integer> aposta, int bet) { // Metodo que retorna o cartï¿½o com os numeros de cada aposta;
 
 		JPanel ResultPanel = new JPanel();
 		ResultPanel.setBackground(Color.white);
@@ -874,15 +888,13 @@ public class ScreenObj extends JFrame {
 			button_24.setBackground(Color.green);
 		button_24.setFocusable(false);
 		ResultPanel.add(button_24);
-		
-		JLabel text = new JLabel("Cartão " + bet);
+
+		JLabel text = new JLabel("CartÃ£o " + bet);
 		text.setBounds(138, 383, 48, 14);
 		ResultPanel.add(text);
-		
-		
+
 		return ResultPanel;
 
 	}
 
-	
 }

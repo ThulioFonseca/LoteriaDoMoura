@@ -21,6 +21,9 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.border.TitledBorder;
 
 import model.Number;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.UIManager;
 
 public class MainScreen {
 
@@ -45,7 +48,7 @@ public class MainScreen {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setTitle("A Grande Loteria do Moura Maravilhosa de Bunita e rica de raio Laser");
+		frame.setTitle("Loto-Moura");
 		frame.setBounds(100, 100, 800, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -73,6 +76,14 @@ public class MainScreen {
 		panel.setBounds(new Rectangle(0, 10, 3500, 200));
 		panel.setBackground(SystemColor.controlHighlight);
 		panel.setLayout(new GridLayout(2, 12, 5, 5));
+		
+		JTextArea txtrRascunho = new JTextArea();
+		txtrRascunho.setBorder(new LineBorder(Color.lightGray));
+		txtrRascunho.setEditable(false);
+		txtrRascunho.setText("");
+		txtrRascunho.setBounds(38, 301, 259, 23);
+		frame.getContentPane().add(txtrRascunho);
+
 
 		JButton btnGerar = new JButton("Gerar");
 		btnGerar.setFocusable(false);
@@ -91,6 +102,8 @@ public class MainScreen {
 					panel.add(card.Results(aposta.get(i), i + 1));
 
 				}
+				
+				txtrRascunho.setText("Excluídos: " + card.getRemoved().toString());
 
 				scrollPane.setViewportView(panel);
 
@@ -101,10 +114,6 @@ public class MainScreen {
 		btnGerar.setBounds(116, 262, 89, 23);
 		frame.getContentPane().add(btnGerar);
 
-		JTextArea txtrRascunho = new JTextArea();
-		txtrRascunho.setText("Rascunho");
-		txtrRascunho.setBounds(38, 301, 259, 169);
-		frame.getContentPane().add(txtrRascunho);
-
+		
 	}
 }
